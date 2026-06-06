@@ -416,7 +416,7 @@ const ProcessFeed = (ctx, { data = [] }, params = {}) => {
                     avatar: originalItem.user?.profile_image_url_https,
                 },
             ],
-            description,
+//            description,
             pubDate: parseDate(item.created_at),
             link,
             guid: link.replace('x.com', 'twitter.com'),
