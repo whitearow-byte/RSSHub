@@ -89,7 +89,7 @@ async function handler(ctx) {
         title: `Twitter @${userInfo?.name}`,
         link: `https://x.com/${userInfo?.screen_name}`,
         image: profileImageUrl.replace(/_normal.jpg$/, '.jpg'),
-        description: userInfo?.description,
+//        description: userInfo?.description,
         item:
             data &&
             utils.ProcessFeed(ctx, {
