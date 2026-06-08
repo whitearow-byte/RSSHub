@@ -209,7 +209,7 @@ const ProcessFeed = (ctx, { data = [] }, params = {}) => {
     const generatePicsUrl = (item) => {
         // When author avatar is shown, generate invisible <img> for inner images at the beginning of HTML
         // to please some RSS readers
-        let picsPrefix = '';
+        let picsUrl = '';
         if (item.extended_entities) {
             for (const media of item.extended_entities.media) {
                 let content;
@@ -222,14 +222,14 @@ const ProcessFeed = (ctx, { data = [] }, params = {}) => {
                     case 'photo':
                     default:
                         originalImg = getOriginalImg(media.media_url_https);
-                        content = `<img width='0' height='0' hidden='true' src='${originalImg}'>`;
+                        content = originalImg;
                         break;
                 }
 
-                picsPrefix += content;
+                picsUrl += content;
             }
         }
-        return originalImg;
+        return picsUrl;
     };
 // Insert End
 
