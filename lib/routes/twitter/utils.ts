@@ -408,11 +408,13 @@ const ProcessFeed = (ctx, { data = [] }, params = {}) => {
             }
             description += `<small>${parseDate(item.created_at)}</small>`;
         }
-
+/*
         const link =
             originalItem.user?.screen_name && (originalItem.id_str || originalItem.conversation_id_str)
                 ? `https://x.com/${originalItem.user?.screen_name}/status/${originalItem.id_str || originalItem.conversation_id_str}`
                 : `https://x.com/${item.user?.screen_name}/status/${item.id_str || item.conversation_id_str}`;
+*/
+const link = '';
         
         return {
             title,
