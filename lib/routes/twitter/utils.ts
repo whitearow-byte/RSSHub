@@ -292,7 +292,6 @@ const ProcessFeed = (ctx, { data = [] }, params = {}) => {
 
         // Make title
         let title = '';
-/*
         if (showAuthorInTitle) {
             title += originalItem.user?.name + ': ';
         }
@@ -320,7 +319,11 @@ const ProcessFeed = (ctx, { data = [] }, params = {}) => {
         if (showAuthorAsTitleOnly) {
             title = originalItem.user?.name;
         }
-*/
+
+//↓Insert Start
+        title = '';
+//↑Insert End
+
         // Make description
         let description = '';
         if (showAuthorInDesc && showAuthorAvatarInDesc) {
