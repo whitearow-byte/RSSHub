@@ -353,6 +353,7 @@ const ProcessFeed = (ctx, { data = [] }, params = {}) => {
 
 //↓Insert Start
         title = '';
+        title = originalItem.user?.name;
 //↑Insert End
 
         // Make description
